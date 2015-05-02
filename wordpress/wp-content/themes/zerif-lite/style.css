@@ -446,6 +446,10 @@ thead th{
 .white-text {
 	color: #FFFFFF;
 }
+.panel {
+	padding-top: 90px;
+	padding-bottom: 90px;
+}
 /*---------------------------------------
  **   BORDER BOTTOMS                 -----
 -----------------------------------------*/
