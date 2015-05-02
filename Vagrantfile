@@ -8,7 +8,7 @@ sudo apt-get update
 sudo debconf-set-selections <<< 'mysql-server mysql-server/root_password password root'
 sudo debconf-set-selections <<< 'mysql-server mysql-server/root_password_again password root'
 
-sudo apt-get install -y php5 apache2 libapache2-mod-php5 php5-curl php5-gd php5-mcrypt php5-readline mysql-server-5.5 php5-mysql git-core
+sudo apt-get install -y php5 apache2 libapache2-mod-php5 php5-curl php5-gd php5-mcrypt php5-readline mysql-server-5.5 php5-mysql git-core nfs-kernel-server
 
 sudo a2enmod rewrite
 
@@ -26,6 +26,6 @@ SHELL
 Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.box = "ubuntu/trusty64"
   config.vm.network :private_network, ip: "192.168.33.21"
-  config.vm.synced_folder "./wordpress", "/var/www"
+  config.vm.synced_folder "./wordpress", "/var/www", type: "nfs"
   config.vm.provision "shell", inline: userland
 end
