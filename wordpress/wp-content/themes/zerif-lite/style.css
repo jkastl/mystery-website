@@ -299,7 +299,7 @@ h6 {
 	border: none;
 }
 .red-btn {
-	background: #3ab0e2;
+	background: #cc3327;
 }
 .green-btn {
 	background: #3daa6a;
@@ -321,7 +321,7 @@ h6 {
 }
 .red-btn:hover {
 	color: #FFF;
-	background: #1288b9;
+	background: #cc3327;
 }
 .green-btn:hover {
 	color: #FFF;
@@ -2237,6 +2237,10 @@ width: -webkit-calc(100% / 4);
 
 .home-cta a:hover {
 	opacity: .8;
+}
+
+.home-cta a:.red-btn {
+	background-image: #cc3327;
 }
 
 .home-cta a.green-btn:hover {
