@@ -22,40 +22,41 @@ if ( get_option( 'show_on_front' ) == 'page' ) {
 
 
 
-				<?php /* Start the Loop */ ?>
+        <?php /* Start the Loop */ ?>
 
-				<?php while ( have_posts() ) : the_post(); ?>
-
-
-
-					<?php
-
-						/* Include the Post-Format-specific template for the content.
-
-						 * If you want to override this in a child theme, then include a file
-
-						 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
-
-						 */
-
-						get_template_part( 'content', get_post_format() );
-
-					?>
+        <?php while ( have_posts() ) : the_post(); ?>
 
 
 
-				<?php endwhile; ?>
+            <?php
+
+            /* Include the Post-Format-specific template for the content.
+
+             * If you want to override this in a child theme, then include a file
+
+             * called content-___.php (where ___ is the Post Format name) and that will be used instead.
+
+             */
+
+            get_template_part( 'content', get_post_format() );
+
+            ?>
+
+
+
+        <?php endwhile; ?>
+
 
 
 			<?php else : ?>
 
 
 
-				<?php get_template_part( 'content', 'none' ); ?>
+        <?php get_template_part( 'content', 'none' ); ?>
 
 
 
-			<?php endif; ?>
+    <?php endif; ?>
 
 
 
@@ -82,7 +83,6 @@ if ( get_option( 'show_on_front' ) == 'page' ) {
 		</div>
 	</div>
 
-
 </header> <!-- / END HOME SECTION  -->
 
 
@@ -107,6 +107,7 @@ if ( get_option( 'show_on_front' ) == 'page' ) {
 			<?php
 
 
+
 				$zerif_aboutus_subtitle = get_theme_mod('zerif_aboutus_subtitle',__('Add a subtitle in Customizer, "About us section"','zerif-lite'));
 
 
@@ -119,29 +120,14 @@ if ( get_option( 'show_on_front' ) == 'page' ) {
 						echo __($zerif_aboutus_subtitle,'zerif-lite');
 
 
-					echo '</h6>';
-
+    $zerif_aboutus_show = get_theme_mod('zerif_aboutus_show');
 
 				endif;
-
-
 			?>
 		</div><!-- / END SECTION HEADER -->
 	</div>
 </section>
 
-<section class="our-spotlight" id="ourspotlight">
-
-	<div class="container">
-
-		<div class="section-header">
-		<hr>
-		<span class="dark-text">spotlight</span>
-		<hr>
-		</div>
-	</div>
-
-</section>
 <?php echo do_shortcode('[print_responsive_slider_plus_lightbox]'); ?>
 <section class="upcomingevents" id="upcomingevents">
 <?php
@@ -178,3 +164,4 @@ if ( get_option( 'show_on_front' ) == 'page' ) {
 <?php
 
 get_footer(); ?>
+

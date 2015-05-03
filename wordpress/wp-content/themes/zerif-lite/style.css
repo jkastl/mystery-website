@@ -13,7 +13,7 @@ Tags: black, gray, red, white, one-column, two-columns, right-sidebar,fixed-layo
 */
 
 @import url(//fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600italic,600,700,700italic,800,800italic);
-
+@import url("//netdna.bootstrapcdn.com/bootstrap/3.0.0-rc2/css/bootstrap-glyphicons.css");
 /*--------------------------------------------------------------
 1.0 - Reset
 --------------------------------------------------------------*/
@@ -450,6 +450,25 @@ thead th{
 	padding-top: 90px;
 	padding-bottom: 90px;
 }
+
+.font-family-custom {
+    font-family: "Source Sans Pro", Helvetica, sans-serif;
+    font-size: 12px;
+}
+
+.form-container {
+    max-width: 650px;
+}
+
+.address-container {
+    max-width: 200px;
+    margin: 0 auto;
+}
+
+.map-marker {
+    font-size: 1.5em;
+}
+
 /*---------------------------------------
  **   BORDER BOTTOMS                 -----
 -----------------------------------------*/
@@ -974,6 +993,7 @@ a:active {
 }
 .home .site-content {
 	background: none;
+	margin-top: -8px;
 }
 
  /*---------------------------------------
