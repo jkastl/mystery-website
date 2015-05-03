@@ -154,7 +154,7 @@ jQuery(document).ready(function() {
 
   
 
-  jQuery('body:not(.home)').removeClass('custom-background');
+  jQuery('body').removeClass('custom-background');
 
   
 

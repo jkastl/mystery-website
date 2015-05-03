@@ -156,85 +156,24 @@ add_action('after_setup_theme', 'zerif_setup');
 
 /**
  * Register widgetized area and update sidebar with default widgets.
-
  */
+
+add_filter('excerpt_length', 'my_excerpt_length');
+function my_excerpt_length($length) {
+return 40; }
 
 function zerif_widgets_init()
 {
 
     register_sidebar(array(
 
-        'name' => __('Sidebar', 'zerif-lite'),
+        'name' => __('Home Slideshow', 'zerif-lite'),
 
-        'id' => 'sidebar-1',
-
-        'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-
-        'after_widget' => '</aside>',
-
-        'before_title' => '<h1 class="widget-title">',
-
-        'after_title' => '</h1>',
-
-    ));
-
-    register_sidebar(array(
-
-        'name' => __('Our focus section', 'zerif-lite'),
-
-        'id' => 'sidebar-ourfocus',
-
-        'before_widget' => '',
-
-        'after_widget' => '',
-
-        'before_title' => '<h1 class="widget-title">',
-
-        'after_title' => '</h1>',
-
-    ));
-
-    register_sidebar(array(
-
-        'name' => __('Testimonials section', 'zerif-lite'),
-
-        'id' => 'sidebar-testimonials',
+        'id' => 'show-slideshow',
 
         'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 
         'after_widget' => '</aside>',
-
-        'before_title' => '<h1 class="widget-title">',
-
-        'after_title' => '</h1>',
-
-    ));
-
-    register_sidebar(array(
-
-        'name' => __('About us section', 'zerif-lite'),
-
-        'id' => 'sidebar-aboutus',
-
-        'before_widget' => '',
-
-        'after_widget' => '',
-
-        'before_title' => '<h1 class="widget-title">',
-
-        'after_title' => '</h1>',
-
-    ));
-
-    register_sidebar(array(
-
-        'name' => __('Our team section', 'zerif-lite'),
-
-        'id' => 'sidebar-ourteam',
-
-        'before_widget' => '',
-
-        'after_widget' => '',
 
         'before_title' => '<h1 class="widget-title">',
 
