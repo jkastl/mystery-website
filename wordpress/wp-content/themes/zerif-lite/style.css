@@ -299,10 +299,10 @@ h6 {
 	border: none;
 }
 .red-btn {
-	background: #3daa6a;
+	background: #cc3327;
 }
 .green-btn {
-	background: #cc3327;
+	background: #3daa6a;
 }
 .blue-btn {
 	background: #3ab0e2;
@@ -317,11 +317,11 @@ h6 {
 }
 .blue-btn:hover {
 	color: #FFF;
-	background: #1288b9;
+	background: #069059;
 }
 .red-btn:hover {
 	color: #FFF;
-	background: #069059;
+	background: #1288b9;
 }
 .green-btn:hover {
 	color: #FFF;
