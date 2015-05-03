@@ -130,11 +130,11 @@ padding-left: 0 !important;
 }
 /* Selection colours (easy to forget) */
 ::selection {
-	background: #FC6D6D;
+	background: #1288b9;
 	color: #FFF;
 }
 ::-moz-selection {
-	background: #FC6D6D;
+	background: #1288b9;
 	color: #FFF;
 }
 a {
@@ -691,15 +691,15 @@ input:focus {
  **   5.1 Links                 -----
 -----------------------------------------*/
 a {
-	color: #e96656;
+	color: #1288b9;
 }
 a:visited {
-	color: #e96656;
+	color: #1288b9;
 }
 a:hover,
 a:focus,
 a:active {
-	color: #cb4332;
+	color: #3daa6a;
 }
 /*---------------------------------------
  **   5.2 Menus                  -----
