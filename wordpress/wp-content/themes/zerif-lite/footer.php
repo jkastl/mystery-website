@@ -116,23 +116,11 @@
 						
 						/* facebook */
 						if( !empty($zerif_socials_facebook) ):
-							echo '<li><a target="_blank" href="'.esc_url(__($zerif_socials_facebook,'zerif-lite')).'"><i class="fa fa-facebook"></i></a></li>';
+							echo '<li><a target="_blank" href="https://www.facebook.com/UrbanRangerCorps"><i class="fa fa-facebook"></i></a></li>';
 						endif;
 						/* twitter */
 						if( !empty($zerif_socials_twitter) ):
-							echo '<li><a target="_blank" href="'.esc_url(__($zerif_socials_twitter,'zerif-lite')).'"><i class="fa fa-twitter"></i></a></li>';
-						endif;
-						/* linkedin */
-						if( !empty($zerif_socials_linkedin) ):
-							echo '<li><a target="_blank" href="'.esc_url(__($zerif_socials_linkedin,'zerif-lite')).'"><i class="fa fa-linkedin"></i></a></li>';
-						endif;
-						/* behance */
-						if( !empty($zerif_socials_behance) ):
-							echo '<li><a target="_blank" href="'.esc_url(__($zerif_socials_behance,'zerif-lite')).'"><i class="fa fa-behance"></i></a></li>';
-						endif;
-						/* dribbble */
-						if( !empty($zerif_socials_dribbble) ):
-							echo '<li><a target="_blank" href="'.esc_url(__($zerif_socials_dribbble,'zerif-lite')).'"><i class="fa fa-dribbble"></i></a></li>';
+							echo '<li><a target="_blank" href="https://twitter.com/UrbanRangerCorp"><i class="fa fa-twitter"></i></a></li>';
 						endif;
 						echo '</ul>';
 					endif;	
