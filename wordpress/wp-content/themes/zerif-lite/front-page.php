@@ -30,45 +30,45 @@ if ( get_option( 'show_on_front' ) == 'page' ) {
 
 
 
-				<?php /* Start the Loop */ ?>
+        <?php /* Start the Loop */ ?>
 
-				<?php while ( have_posts() ) : the_post(); ?>
-
-
-
-					<?php
-
-						/* Include the Post-Format-specific template for the content.
-
-						 * If you want to override this in a child theme, then include a file
-
-						 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
-
-						 */
-
-						get_template_part( 'content', get_post_format() );
-
-					?>
+        <?php while ( have_posts() ) : the_post(); ?>
 
 
 
-				<?php endwhile; ?>
+            <?php
+
+            /* Include the Post-Format-specific template for the content.
+
+             * If you want to override this in a child theme, then include a file
+
+             * called content-___.php (where ___ is the Post Format name) and that will be used instead.
+
+             */
+
+            get_template_part( 'content', get_post_format() );
+
+            ?>
 
 
 
-				<?php zerif_paging_nav(); ?>
+        <?php endwhile; ?>
 
 
 
-			<?php else : ?>
+        <?php zerif_paging_nav(); ?>
 
 
 
-				<?php get_template_part( 'content', 'none' ); ?>
+    <?php else : ?>
 
 
 
-			<?php endif; ?>
+        <?php get_template_part( 'content', 'none' ); ?>
+
+
+
+    <?php endif; ?>
 
 
 
@@ -94,203 +94,203 @@ if ( get_option( 'show_on_front' ) == 'page' ) {
 	<?php
 }else {
 
-	if(isset($_POST['submitted'])) :
+    if(isset($_POST['submitted'])) :
 
 
-			/* recaptcha */
-			
-			$zerif_contactus_sitekey = get_theme_mod('zerif_contactus_sitekey');
+        /* recaptcha */
 
-			$zerif_contactus_secretkey = get_theme_mod('zerif_contactus_secretkey');
-			
-			$zerif_contactus_recaptcha_show = get_theme_mod('zerif_contactus_recaptcha_show');
+        $zerif_contactus_sitekey = get_theme_mod('zerif_contactus_sitekey');
 
-			if( isset($zerif_contactus_recaptcha_show) && $zerif_contactus_recaptcha_show != 1 && !empty($zerif_contactus_sitekey) && !empty($zerif_contactus_secretkey) ) :
+        $zerif_contactus_secretkey = get_theme_mod('zerif_contactus_secretkey');
 
-		        $captcha;
+        $zerif_contactus_recaptcha_show = get_theme_mod('zerif_contactus_recaptcha_show');
 
-		        if( isset($_POST['g-recaptcha-response']) ){
+        if( isset($zerif_contactus_recaptcha_show) && $zerif_contactus_recaptcha_show != 1 && !empty($zerif_contactus_sitekey) && !empty($zerif_contactus_secretkey) ) :
 
-		          $captcha=$_POST['g-recaptcha-response'];
+            $captcha;
 
-		        }
+            if( isset($_POST['g-recaptcha-response']) ){
 
-		        if( !$captcha ){
+                $captcha=$_POST['g-recaptcha-response'];
 
-		          $hasError = true;    
-		          
-		        }
+            }
 
-		        $response = wp_remote_get( "https://www.google.com/recaptcha/api/siteverify?secret=".$zerif_contactus_secretkey."&response=".$captcha."&remoteip=".$_SERVER['REMOTE_ADDR'] );
+            if( !$captcha ){
 
-		        if($response['body'].success==false) {
+                $hasError = true;
 
-		        	$hasError = true;
+            }
 
-		        }
+            $response = wp_remote_get( "https://www.google.com/recaptcha/api/siteverify?secret=".$zerif_contactus_secretkey."&response=".$captcha."&remoteip=".$_SERVER['REMOTE_ADDR'] );
 
-	        endif;
+            if($response['body'].success==false) {
 
+                $hasError = true;
 
+            }
 
-			/* name */
+        endif;
 
 
-			if(trim($_POST['myname']) === ''):
 
+        /* name */
 
-				$nameError = __('* Please enter your name.','zerif-lite');
 
+        if(trim($_POST['myname']) === ''):
 
-				$hasError = true;
 
+            $nameError = __('* Please enter your name.','zerif-lite');
 
-			else:
 
+            $hasError = true;
 
-				$name = trim($_POST['myname']);
 
+        else:
 
-			endif;
 
+            $name = trim($_POST['myname']);
 
-			/* email */
 
+        endif;
 
-			if(trim($_POST['myemail']) === ''):
 
+        /* email */
 
-				$emailError = __('* Please enter your email address.','zerif-lite');
 
+        if(trim($_POST['myemail']) === ''):
 
-				$hasError = true;
 
+            $emailError = __('* Please enter your email address.','zerif-lite');
 
-			elseif (!preg_match("/^[[:alnum:]][a-z0-9_.-]*@[a-z0-9.-]+\.[a-z]{2,4}$/i", trim($_POST['myemail']))) :
 
+            $hasError = true;
 
-				$emailError = __('* You entered an invalid email address.','zerif-lite');
 
+        elseif (!preg_match("/^[[:alnum:]][a-z0-9_.-]*@[a-z0-9.-]+\.[a-z]{2,4}$/i", trim($_POST['myemail']))) :
 
-				$hasError = true;
 
+            $emailError = __('* You entered an invalid email address.','zerif-lite');
 
-			else:
 
+            $hasError = true;
 
-				$email = trim($_POST['myemail']);
 
+        else:
 
-			endif;
 
+            $email = trim($_POST['myemail']);
 
-			/* subject */
 
+        endif;
 
-			if(trim($_POST['mysubject']) === ''):
 
+        /* subject */
 
-				$subjectError = __('* Please enter a subject.','zerif-lite');
 
+        if(trim($_POST['mysubject']) === ''):
 
-				$hasError = true;
 
+            $subjectError = __('* Please enter a subject.','zerif-lite');
 
-			else:
 
+            $hasError = true;
 
-				$subject = trim($_POST['mysubject']);
 
+        else:
 
-			endif;
 
+            $subject = trim($_POST['mysubject']);
 
-			/* message */
 
+        endif;
 
-			if(trim($_POST['mymessage']) === ''):
 
+        /* message */
 
-				$messageError = __('* Please enter a message.','zerif-lite');
 
+        if(trim($_POST['mymessage']) === ''):
 
-				$hasError = true;
 
+            $messageError = __('* Please enter a message.','zerif-lite');
 
-			else:
 
+            $hasError = true;
 
-				$message = stripslashes(trim($_POST['mymessage']));
 
+        else:
 
-			endif;
 
+            $message = stripslashes(trim($_POST['mymessage']));
 
 
+        endif;
 
 
-			/* send the email */
 
 
-			if(!isset($hasError)):
 
+        /* send the email */
 
-				$zerif_contactus_email = get_theme_mod('zerif_contactus_email');
-				
-				if( empty($zerif_contactus_email) ):
-				
-					$emailTo = get_theme_mod('zerif_email');
-				
-				else:
-					
-					$emailTo = $zerif_contactus_email;
-				
-				endif;
 
+        if(!isset($hasError)):
 
-				if(isset($emailTo) && $emailTo != ""):
 
-					if( empty($subject) ):
-						$subject = 'From '.$name;
-					endif;
+            $zerif_contactus_email = get_theme_mod('zerif_contactus_email');
 
-					$body = "Name: $name \n\nEmail: $email \n\n Subject: $subject \n\n Message: $message";
+            if( empty($zerif_contactus_email) ):
 
+                $emailTo = get_theme_mod('zerif_email');
 
-					$headers = 'From: '.$name.' <'.$emailTo.'>' . "\r\n" . 'Reply-To: ' . $email;
+            else:
 
+                $emailTo = $zerif_contactus_email;
 
-					wp_mail($emailTo, $subject, $body, $headers);
+            endif;
 
 
-					$emailSent = true;
+            if(isset($emailTo) && $emailTo != ""):
 
+                if( empty($subject) ):
+                    $subject = 'From '.$name;
+                endif;
 
-				else:
+                $body = "Name: $name \n\nEmail: $email \n\n Subject: $subject \n\n Message: $message";
 
 
-					$emailSent = false;
+                $headers = 'From: '.$name.' <'.$emailTo.'>' . "\r\n" . 'Reply-To: ' . $email;
 
 
-				endif;
+                wp_mail($emailTo, $subject, $body, $headers);
 
 
-			endif;
+                $emailSent = true;
 
 
-		endif;
+            else:
 
 
+                $emailSent = false;
 
-	$zerif_bigtitle_show = get_theme_mod('zerif_bigtitle_show');
 
-	if( isset($zerif_bigtitle_show) && $zerif_bigtitle_show != 1 ):
+            endif;
 
-		include get_template_directory() . "/sections/big_title.php";
-	endif;
 
+        endif;
 
-?>
+
+    endif;
+
+
+
+    $zerif_bigtitle_show = get_theme_mod('zerif_bigtitle_show');
+
+    if( isset($zerif_bigtitle_show) && $zerif_bigtitle_show != 1 ):
+
+        include get_template_directory() . "/sections/big_title.php";
+    endif;
+
+
+    ?>
 
 
 </header> <!-- / END HOME SECTION  -->
@@ -303,53 +303,53 @@ if ( get_option( 'show_on_front' ) == 'page' ) {
 <?php
 
 
-	/* RIBBON WITH BOTTOM BUTTON */
+    /* RIBBON WITH BOTTOM BUTTON */
 
 
-	include get_template_directory() . "/sections/ribbon_with_bottom_button.php";
+    include get_template_directory() . "/sections/ribbon_with_bottom_button.php";
 
 
 
 
-	/* ABOUT US */
+    /* ABOUT US */
 
-	$zerif_aboutus_show = get_theme_mod('zerif_aboutus_show');
+    $zerif_aboutus_show = get_theme_mod('zerif_aboutus_show');
 
-	if( isset($zerif_aboutus_show) && $zerif_aboutus_show != 1 ):
+    if( isset($zerif_aboutus_show) && $zerif_aboutus_show != 1 ):
 
-		include get_template_directory() . "/sections/about_us.php";
-	endif;
-
-
-	/* OUR TEAM */
-
-	$zerif_ourteam_show = get_theme_mod('zerif_ourteam_show');
-
-	if( isset($zerif_ourteam_show) && $zerif_ourteam_show != 1 ):
-
-		include get_template_directory() . "/sections/spotlight.php";
-	endif;
+        include get_template_directory() . "/sections/about_us.php";
+    endif;
 
 
-	/* TESTIMONIALS */
+    /* OUR TEAM */
 
-			$args = array(
-				'post_type'=>'event',
-				'order' => 'ASC'
-			);
-			$the_query = new WP_Query($args);
+    $zerif_ourteam_show = get_theme_mod('zerif_ourteam_show');
 
-			if (have_posts() ): while ( $the_query->have_posts() ) : $the_query->the_post();
+    if( isset($zerif_ourteam_show) && $zerif_ourteam_show != 1 ):
 
-			get_template_part('content', 'event');
-
-			endwhile; endif;
+        include get_template_directory() . "/sections/spotlight.php";
+    endif;
 
 
-	/* RIBBON WITH RIGHT SIDE BUTTON */
+    /* TESTIMONIALS */
+
+    $args = array(
+        'post_type'=>'event',
+        'order' => 'ASC'
+    );
+    $the_query = new WP_Query($args);
+
+    if (have_posts() ): while ( $the_query->have_posts() ) : $the_query->the_post();
+
+        get_template_part('content', 'event');
+
+    endwhile; endif;
 
 
-	include get_template_directory() . "/sections/ribbon_with_right_button.php";
+    /* RIBBON WITH RIGHT SIDE BUTTON */
+
+
+    include get_template_directory() . "/sections/ribbon_with_right_button.php";
 
 }
 get_footer(); ?>
