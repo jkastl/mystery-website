@@ -73,7 +73,17 @@ if ( get_option( 'show_on_front' ) == 'page' ) {
 
 	<?php
 } ?>
-
+	<div class="container" style="text-transform: uppercase;
+  position: absolute;
+  top: 200px;
+  left: 285px;
+  width: 700px;
+  text-shadow: 3px 3px 1px black;
+  color: white;
+  z-index: 900;
+  font-weight: bold;
+  font-size: 42px;
+">Guiding the young men of Kansas City's Urban Core</div>
 	<div class="video">
 		<iframe width="1280" height="720" src="https://www.youtube.com/embed/v0AJplcP3SA?rel=0&controls=0&autoplay=1&showinfo=0&loop=1" frameborder="0" allowfullscreen></iframe>
 
