@@ -299,10 +299,10 @@ h6 {
 	border: none;
 }
 .red-btn {
-	background: #e96656;
+	background: #cc3327;
 }
 .green-btn {
-	background: #20AA73;
+	background: #3daa6a;
 }
 .blue-btn {
 	background: #3ab0e2;
@@ -317,15 +317,15 @@ h6 {
 }
 .blue-btn:hover {
 	color: #FFF;
-	background: #1288b9;
+	background: #069059;
 }
 .red-btn:hover {
 	color: #FFF;
-	background: #cb4332;
+	background: #1288b9;
 }
 .green-btn:hover {
 	color: #FFF;
-	background: #069059;
+	background: #cb4332;
 }
 .yellow-btn:hover {
 	color: #FFF;
@@ -1430,8 +1430,15 @@ object {
 	width: 100%;
 	z-index: 1000;
 	min-height: 75px;
-	margin-bottom: 0;
+	margin: 0px;
+	padding: 0px;
+	left: 0;
+	right: 0;
+	background-image: url("/wp-content/themes/zerif-lite/images/Nav.png");
+	background-size: 100%;
+	background-repeat: none;
 }
+
 #main-nav.fixed {
 	position: fixed;
 	top: 0;
@@ -1498,6 +1505,14 @@ object {
 	position: relative;
 	line-height: 45px;
 }
+
+.navbar-brand img {
+	max-width: 100%;
+	margin-top: -24px;
+	padding-top: 0px;
+	height: auto !important;
+}
+
 .current a {
 	color: #e96656 !important;
 	position: relative;
