@@ -75,7 +75,7 @@ if ( get_option( 'show_on_front' ) == 'page' ) {
 } ?>
 
 	<div class="video">
-		<iframe width="1280" height="720" src="https://www.youtube.com/embed/v0AJplcP3SA?rel=0&amp;controls=0&autoplay=1&loop=1" frameborder="0" allowfullscreen></iframe>
+		<iframe width="1280" height="720" src="https://www.youtube.com/embed/v0AJplcP3SA?rel=0&controls=0&autoplay=1&showinfo=0&loop=1" frameborder="0" allowfullscreen></iframe>
 
 		<div class="home-cta">
 			<a href="/donate" class="btn btn-primary custom-button red-btn">Donate</a>
