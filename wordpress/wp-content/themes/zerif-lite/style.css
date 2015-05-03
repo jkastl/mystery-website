@@ -299,7 +299,7 @@ h6 {
 	border: none;
 }
 .red-btn {
-	background: #cc3327;
+	background: #3ab0e2;
 }
 .green-btn {
 	background: #3daa6a;
@@ -2212,6 +2212,11 @@ width: -webkit-calc(100% / 4);
 .upcomingevents h6 {
 	margin-bottom: 0;
 	font-size: 20px;
+	font-weight: bold;
+}
+
+.content-area .upcomingevents h6 {
+	padding: 0;
 }
 
 .video {
