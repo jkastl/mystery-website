@@ -67,8 +67,8 @@ get_header(); ?>
 		</div>
 	</div>
 	<div class="panel">
-		<div class="container">
-			<?php the_field('about-program_photo') ?>
+		<div class="img-responsive">
+			<?php $img = get_field('about-program_photo'); echo isset($img['url'] ? '<img src="' . $img['url'] . '">' : ''); ?>
 		</div>
 	</div>
 	<div>
