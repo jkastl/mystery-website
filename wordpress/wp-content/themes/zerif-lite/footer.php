@@ -26,13 +26,13 @@
 
 	<?php
 		$footer_sections = 0;
-		$zerif_address = get_theme_mod('zerif_address','24B, Fainari Street, Bucharest, Romania');
+		$zerif_address = get_theme_mod('zerif_address','5908 Swope Pkwy, Kansas City, MO 64130');
 		$zerif_address_icon = get_theme_mod('zerif_address_icon',get_template_directory_uri().'/images/map25-redish.png');
 		
-		$zerif_email = get_theme_mod('zerif_email','support@codeinwp.com');
+		$zerif_email = get_theme_mod('zerif_email','urcinfo@urckc.org');
 		$zerif_email_icon = get_theme_mod('zerif_email_icon',get_template_directory_uri().'/images/envelope4-green.png');
 		
-		$zerif_phone = get_theme_mod('zerif_phone','Phone number');
+		$zerif_phone = get_theme_mod('zerif_phone','(816) 333-6455');
 		$zerif_phone_icon = get_theme_mod('zerif_phone_icon',get_template_directory_uri().'/images/telephone65-blue.png');
 
 		$zerif_socials_facebook = get_theme_mod('zerif_socials_facebook','#');

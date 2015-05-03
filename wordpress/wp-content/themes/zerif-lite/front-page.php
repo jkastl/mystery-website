@@ -127,8 +127,10 @@ if ( get_option( 'show_on_front' ) == 'page' ) {
 		</div><!-- / END SECTION HEADER -->
 	</div>
 </section>
+<div class="img-responsive">
+	<img src="<?php bloginfo('template_url'); ?>/images/home-image.jpg">
+</div>
 
-<?php echo do_shortcode('[print_responsive_slider_plus_lightbox]'); ?>
 <section class="upcomingevents" id="upcomingevents">
 <?php
 
