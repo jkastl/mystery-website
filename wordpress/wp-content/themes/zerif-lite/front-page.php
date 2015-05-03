@@ -8,17 +8,9 @@ if ( get_option( 'show_on_front' ) == 'page' ) {
 
 	</header> <!-- / END HOME SECTION  -->
 
-
-
-		<div id="content" class="site-content">
-
-	<div class="container">
-
-
+<div id="content" class="site-content">
 
 	<div class="content-left-wrap col-md-9">
-
-
 
 		<div id="primary" class="content-area">
 
@@ -56,11 +48,7 @@ if ( get_option( 'show_on_front' ) == 'page' ) {
 
 
 
-        <?php zerif_paging_nav(); ?>
-
-
-
-    <?php else : ?>
+			<?php else : ?>
 
 
 
@@ -82,216 +70,18 @@ if ( get_option( 'show_on_front' ) == 'page' ) {
 
 
 
-	<div class="sidebar-wrap col-md-3 content-left-wrap">
 
-		<?php get_sidebar(); ?>
-
-	</div><!-- .sidebar-wrap -->
-
-
-
-	</div><!-- .container -->
 	<?php
-}else {
-
-    if(isset($_POST['submitted'])) :
-
-
-        /* recaptcha */
-
-        $zerif_contactus_sitekey = get_theme_mod('zerif_contactus_sitekey');
-
-        $zerif_contactus_secretkey = get_theme_mod('zerif_contactus_secretkey');
-
-        $zerif_contactus_recaptcha_show = get_theme_mod('zerif_contactus_recaptcha_show');
-
-        if( isset($zerif_contactus_recaptcha_show) && $zerif_contactus_recaptcha_show != 1 && !empty($zerif_contactus_sitekey) && !empty($zerif_contactus_secretkey) ) :
-
-            $captcha;
-
-            if( isset($_POST['g-recaptcha-response']) ){
-
-                $captcha=$_POST['g-recaptcha-response'];
-
-            }
-
-            if( !$captcha ){
-
-                $hasError = true;
-
-            }
-
-            $response = wp_remote_get( "https://www.google.com/recaptcha/api/siteverify?secret=".$zerif_contactus_secretkey."&response=".$captcha."&remoteip=".$_SERVER['REMOTE_ADDR'] );
-
-            if($response['body'].success==false) {
-
-                $hasError = true;
-
-            }
-
-        endif;
-
-
-
-        /* name */
-
-
-        if(trim($_POST['myname']) === ''):
-
-
-            $nameError = __('* Please enter your name.','zerif-lite');
-
-
-            $hasError = true;
-
-
-        else:
-
-
-            $name = trim($_POST['myname']);
-
-
-        endif;
-
-
-        /* email */
-
-
-        if(trim($_POST['myemail']) === ''):
-
-
-            $emailError = __('* Please enter your email address.','zerif-lite');
-
-
-            $hasError = true;
-
-
-        elseif (!preg_match("/^[[:alnum:]][a-z0-9_.-]*@[a-z0-9.-]+\.[a-z]{2,4}$/i", trim($_POST['myemail']))) :
-
-
-            $emailError = __('* You entered an invalid email address.','zerif-lite');
-
-
-            $hasError = true;
-
-
-        else:
-
-
-            $email = trim($_POST['myemail']);
-
-
-        endif;
-
-
-        /* subject */
-
-
-        if(trim($_POST['mysubject']) === ''):
-
-
-            $subjectError = __('* Please enter a subject.','zerif-lite');
-
-
-            $hasError = true;
-
-
-        else:
-
-
-            $subject = trim($_POST['mysubject']);
-
-
-        endif;
-
-
-        /* message */
-
-
-        if(trim($_POST['mymessage']) === ''):
-
-
-            $messageError = __('* Please enter a message.','zerif-lite');
-
-
-            $hasError = true;
-
-
-        else:
-
-
-            $message = stripslashes(trim($_POST['mymessage']));
-
-
-        endif;
-
-
-
-
-
-        /* send the email */
-
-
-        if(!isset($hasError)):
-
-
-            $zerif_contactus_email = get_theme_mod('zerif_contactus_email');
-
-            if( empty($zerif_contactus_email) ):
-
-                $emailTo = get_theme_mod('zerif_email');
-
-            else:
-
-                $emailTo = $zerif_contactus_email;
-
-            endif;
-
-
-            if(isset($emailTo) && $emailTo != ""):
-
-                if( empty($subject) ):
-                    $subject = 'From '.$name;
-                endif;
-
-                $body = "Name: $name \n\nEmail: $email \n\n Subject: $subject \n\n Message: $message";
-
-
-                $headers = 'From: '.$name.' <'.$emailTo.'>' . "\r\n" . 'Reply-To: ' . $email;
-
-
-                wp_mail($emailTo, $subject, $body, $headers);
-
-
-                $emailSent = true;
-
-
-            else:
-
-
-                $emailSent = false;
-
-
-            endif;
-
-
-        endif;
-
-
-    endif;
-
-
-
-    $zerif_bigtitle_show = get_theme_mod('zerif_bigtitle_show');
-
-    if( isset($zerif_bigtitle_show) && $zerif_bigtitle_show != 1 ):
-
-        include get_template_directory() . "/sections/big_title.php";
-    endif;
-
-
-    ?>
-
+} ?>
+
+	<div class="video">
+		<iframe width="1280" height="720" src="https://www.youtube.com/embed/v0AJplcP3SA?rel=0&amp;controls=0&autoplay=1&loop=1" frameborder="0" allowfullscreen></iframe>
+
+		<div class="home-cta">
+			<a href="/donate" class="btn btn-primary custom-button red-btn">Donate</a>
+			<a href="/apply" class="btn btn-primary custom-button green-btn">Apply</a>
+		</div>
+	</div>
 
 </header> <!-- / END HOME SECTION  -->
 
@@ -299,57 +89,79 @@ if ( get_option( 'show_on_front' ) == 'page' ) {
 <div id="content" class="site-content">
 
 
-
-<?php
-
-
-    /* RIBBON WITH BOTTOM BUTTON */
+<section class="about-us" id="aboutus">
+	<div class="container">
 
 
-    include get_template_directory() . "/sections/ribbon_with_bottom_button.php";
+		<!-- SECTION HEADER -->
+
+		<div class="section-header">
+
+
+			<!-- SECTION TITLE -->
+
+			<h2 class="white-text">Overview</h2>
+
+			<!-- SHORT DESCRIPTION ABOUT THE SECTION -->
+
+			<?php
 
 
 
+				$zerif_aboutus_subtitle = get_theme_mod('zerif_aboutus_subtitle',__('Add a subtitle in Customizer, "About us section"','zerif-lite'));
 
-    /* ABOUT US */
+
+				if( !empty($zerif_aboutus_subtitle) ):
+
+
+					echo '<h6 class="white-text">';
+
+
+						echo __($zerif_aboutus_subtitle,'zerif-lite');
+
 
     $zerif_aboutus_show = get_theme_mod('zerif_aboutus_show');
 
-    if( isset($zerif_aboutus_show) && $zerif_aboutus_show != 1 ):
+				endif;
+			?>
+		</div><!-- / END SECTION HEADER -->
+	</div>
+</section>
 
-        include get_template_directory() . "/sections/about_us.php";
-    endif;
+<?php echo do_shortcode('[print_responsive_slider_plus_lightbox]'); ?>
+<section class="upcomingevents" id="upcomingevents">
+<?php
 
+	$args = array(
+		'post_type'=>'event',
+		'order' => 'ASC',
+		'posts_per_page'=> 3
+	);
+	$the_query = new WP_Query($args); ?>
+	<div class="container">
+		<div class="section-header">
+		<h2><a href="/events" class="dark-text">Upcoming Events</a></h2>
 
-    /* OUR TEAM */
+			<?php if (have_posts() ): while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
 
-    $zerif_ourteam_show = get_theme_mod('zerif_ourteam_show');
+				<section id="<?php post_class(); ?>" class="event">
+					<h6><?php the_title(); ?></h6>
+					<h6><?php echo get_field('month'); ?></h6>
+					<p><?php the_excerpt(); ?></p>
+				</section>
+			<?php endwhile; endif; ?>
+		</div>
+	</div>
+</section>
 
-    if( isset($zerif_ourteam_show) && $zerif_ourteam_show != 1 ):
+	<!-- <section class="our-sponsors" id="sponsors">
+		<div class="container">
+			<div class="section-header">
+				<h2 class="dark-text">Sponsors</h2>
+			</div>
+		</div>
+	</section> -->
+<?php
 
-        include get_template_directory() . "/sections/spotlight.php";
-    endif;
-
-
-    /* TESTIMONIALS */
-
-    $args = array(
-        'post_type'=>'event',
-        'order' => 'ASC'
-    );
-    $the_query = new WP_Query($args);
-
-    if (have_posts() ): while ( $the_query->have_posts() ) : $the_query->the_post();
-
-        get_template_part('content', 'event');
-
-    endwhile; endif;
-
-
-    /* RIBBON WITH RIGHT SIDE BUTTON */
-
-
-    include get_template_directory() . "/sections/ribbon_with_right_button.php";
-
-}
 get_footer(); ?>
+
