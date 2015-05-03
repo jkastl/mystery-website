@@ -55,7 +55,7 @@ get_header(); ?>
 	</div>
 	<div class="panel">
 		<div class="img-responsive">
-			<?php $img = get_field('about-story_photo'); echo !empty($img['url'] ? '<img src="' . $img['url'] . '">' : ''); ?>
+			<?php $img = get_field('about-story_photo'); echo (!empty($img['url']) ? '<img src="' . $img['url'] . '">' : ''); ?>
 		</div>
 	</div>
 	<div class="panel">
@@ -68,7 +68,7 @@ get_header(); ?>
 	</div>
 	<div class="panel">
 		<div class="img-responsive">
-			<?php $img = get_field('about-program_photo'); echo !empty($img['url'] ? '<img src="' . $img['url'] . '">' : ''); ?>
+			<?php $img = get_field('about-program_photo'); echo (!empty($img['url']) ? '<img src="' . $img['url'] . '">' : ''); ?>
 		</div>
 	</div>
 	<div>
