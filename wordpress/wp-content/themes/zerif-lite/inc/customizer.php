@@ -1,25 +1,17 @@
 <?php
 
 /**
-
  * zerif Theme Customizer
-
  *
-
  * @package zerif
-
  */
 
 
 
 /**
-
  * Add postMessage support for site title and description for the Theme Customizer.
-
  *
-
  * @param WP_Customize_Manager $wp_customize Theme Customizer object.
-
  */
 
 
@@ -1059,9 +1051,9 @@ function zerif_customize_register( $wp_customize ) {
 
 
 
-	$wp_customize->add_section( 'zerif_ourteam_section' , array(
+	$wp_customize->add_section( 'zerif_spotlight_section' , array(
 
-			'title'       => __( 'Our team section', 'zerif-lite' ),
+			'title'       => __( 'Employee and Volunteer Spotlight', 'zerif-lite' ),
 
     	  	'priority'    => 35
 
@@ -1071,19 +1063,19 @@ function zerif_customize_register( $wp_customize ) {
 
 	/* our team show/hide */
 
-	$wp_customize->add_setting( 'zerif_ourteam_show', array('sanitize_callback' => 'zerif_sanitize_text'));
+	$wp_customize->add_setting( 'zerif_spotlight_show', array('sanitize_callback' => 'zerif_sanitize_text'));
 
     $wp_customize->add_control(
 
-		'zerif_ourteam_show',
+		'zerif_spotlight_show',
 
 		array(
 
 			'type' => 'checkbox',
 
-			'label' => __('Hide our team section?','zerif-lite'),
+			'label' => __('Hide employee and volunteer spotlight section?','zerif-lite'),
 
-			'section' => 'zerif_ourteam_section',
+			'section' => 'zerif_spotlight_section',
 
 			'priority'    => 1,
 
@@ -1094,15 +1086,15 @@ function zerif_customize_register( $wp_customize ) {
 
 	/* our team title */
 
-	$wp_customize->add_setting( 'zerif_ourteam_title', array('sanitize_callback' => 'zerif_sanitize_text','default' => __('Our Team','zerif-lite')));
+	$wp_customize->add_setting( 'zerif_spotlight_title', array('sanitize_callback' => 'zerif_sanitize_text','default' => __('Our Team','zerif-lite')));
 
-	$wp_customize->add_control( 'zerif_ourteam_title', array(
+	$wp_customize->add_control( 'zerif_spotlight_title', array(
 
 				'label'    => __( 'Title', 'zerif-lite' ),
 
-				'section'  => 'zerif_ourteam_section',
+				'section'  => 'zerif_spotlight_section',
 
-				'settings' => 'zerif_ourteam_title',
+				'settings' => 'zerif_spotlight_title',
 
 				'priority'    => 2,
 
@@ -1111,17 +1103,17 @@ function zerif_customize_register( $wp_customize ) {
 
 	/* our team subtitle */
 
-	$wp_customize->add_setting( 'zerif_ourteam_subtitle', array('sanitize_callback' => 'zerif_sanitize_text','default' => __('Add a subtitle in Customizer, "Our team section"','zerif-lite')));
+	$wp_customize->add_setting( 'zerif_spotlight_subtitle', array('sanitize_callback' => 'zerif_sanitize_text','default' => __('Add a subtitle in Customizer, "Our team section"','zerif-lite')));
 
 
 
-	$wp_customize->add_control( 'zerif_ourteam_subtitle', array(
+	$wp_customize->add_control( 'zerif_spotlight_subtitle', array(
 
-			'label'    => __( 'Our team subtitle', 'zerif-lite' ),
+			'label'    => __( 'Spotlight subtitle', 'zerif-lite' ),
 
-	      	'section'  => 'zerif_ourteam_section',
+	      	'section'  => 'zerif_spotlight_section',
 
-	      	'settings' => 'zerif_ourteam_subtitle',
+	      	'settings' => 'zerif_spotlight_subtitle',
 
 			'priority'    => 3,
 
