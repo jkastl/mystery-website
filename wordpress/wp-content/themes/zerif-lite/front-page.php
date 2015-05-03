@@ -125,6 +125,11 @@ if ( get_option( 'show_on_front' ) == 'page' ) {
 				endif;
 			?>
 		</div><!-- / END SECTION HEADER -->
+		<section>
+			<h2>Spotlight</h2>
+			<hr />
+			<?= do_shortcode('[employee_circle_grid filter="attr::emd_employee_featured::is::1"]'); ?>
+		</section>
 	</div>
 </section>
 <div class="img-responsive">
