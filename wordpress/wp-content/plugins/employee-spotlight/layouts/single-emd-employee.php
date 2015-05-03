@@ -19,7 +19,7 @@
             <div class=\"person-mobile\"><i class=\"fa fa-mobile fa-fw\"></i> " . emd_mb_meta('emd_employee_mobile') . "</div>
             " : ""); ?> <?php echo ((emd_mb_meta('emd_employee_primary_address')) ? "
             <div class=\"person-priaddress\"><i class=\"fa fa-map-marker fa-fw\"></i>" . emd_mb_meta('emd_employee_primary_address') . "</div>
-            " : ""); ?> 
+            " : ""); ?>
         </div>
         <div class="person-link">
             <?php echo ((emd_mb_meta('emd_employee_email')) ? "<a class=\"social-icon email animate fa fa-envelope fa-fw\" href=\"mailto:" . emd_mb_meta('emd_employee_email') . "\"></a>" : ""); ?> 
