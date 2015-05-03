@@ -28,6 +28,7 @@
 		$footer_sections = 0;
 		$zerif_address = get_theme_mod('zerif_address','5908 Swope Pkwy, Kansas City, MO 64130');
 		$zerif_address_icon = get_theme_mod('zerif_address_icon',get_template_directory_uri().'/images/map25-redish.png');
+		$maps_link = 'https://www.google.com/maps/place/5908+Swope+Pkwy,+Kansas+City,+MO+64130/@39.0177202,-94.5431631,17z/data=!3m1!4b1!4m2!3m1!1s0x87c0e598c0e8923f:0x63d54dbddec64f3f';
 		
 		$zerif_email = get_theme_mod('zerif_email','urcinfo@urckc.org');
 		$zerif_email_icon = get_theme_mod('zerif_email_icon',get_template_directory_uri().'/images/envelope4-green.png');
@@ -73,25 +74,25 @@
 		
 		/* COMPANY ADDRESS */
 		if( !empty($zerif_address) ):
-			echo '<div class="'.$footer_class.' company-details">';
+			echo '<a href="' . $maps_link . '" target="_blank"><div class="'.$footer_class.' company-details">';
 				echo '<div class="icon-top red-text">';
 					if( !empty($zerif_address_icon) ) echo '<img src="'.esc_url(__($zerif_address_icon,'zerif-lite')).'">';
 				echo '</div>';
 				echo $zerif_address;
-			echo '</div>';
+			echo '</div></a>';
 		endif;
 		
 		/* COMPANY EMAIL */
 		
 		
 		if( !empty($zerif_email) ):
-			echo '<div class="'.$footer_class.' company-details">';
+			echo '<a href="mailto:' . $zerif_email . '"><div class="'.$footer_class.' company-details">';
 				echo '<div class="icon-top green-text">';
 					
 					if( !empty($zerif_email_icon) ) echo '<img src="'.esc_url(__($zerif_email_icon,'zerif-lite')).'">';
 				echo '</div>';
 				echo $zerif_email;
-			echo '</div>';
+			echo '</div></a>';
 		endif;
 		
 		/* COMPANY PHONE NUMBER */
