@@ -1456,6 +1456,11 @@ object {
 	padding: 0;
 	line-height: 35px;
 }
+
+.navbar-inverse .navbar-nav>li>a:hover {
+	color: #fff;
+}
+
 .navbar-inverse .main-navigation ul > li {
 	display: inline;
 	margin-right: 20px;
@@ -2228,6 +2233,14 @@ width: -webkit-calc(100% / 4);
 	bottom: 69px;
 	margin-left: -150px;
 	left: 50%;
+}
+
+.home-cta a:hover {
+	opacity: .8;
+}
+
+.home-cta a.green-btn:hover {
+	background: #3daa6a;
 }
 
 /*---------------------------------------
