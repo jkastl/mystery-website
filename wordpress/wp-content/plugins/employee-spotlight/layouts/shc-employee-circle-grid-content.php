@@ -13,5 +13,5 @@ $ent_attrs = get_option('empslight_com_attr_list');
             <span class="person-name"><?php echo get_the_title(); ?></span>
             <br>
         </div>
-        <div class="panel-body hidden-xs hidden-sm"><?php echo $post->post_excerpt; ?></div>
+        <div class="panel-body"><?php echo $post->post_excerpt; ?></div>
     </article>
