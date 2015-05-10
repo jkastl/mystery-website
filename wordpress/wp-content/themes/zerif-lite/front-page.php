@@ -139,6 +139,13 @@ if ( get_option( 'show_on_front' ) == 'page' ) {
 		<section>
 			<h2>Spotlight</h2>
 			<hr />
+            <style type="text/css">
+                div.emd-container .person-img {
+                    padding: 25% !important;
+                    width: 25% !important;
+                    margin: 0 auto;
+                }
+            </style>
             <?php
                 $dir_url = EMPSLIGHT_COM_PLUGIN_URL;
                 wp_enqueue_script('jquery');
