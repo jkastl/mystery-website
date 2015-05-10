@@ -1452,7 +1452,7 @@ object {
 	margin-right: 0 !important;
 }
 .navbar-inverse .navbar-nav>li>a {
-	color: #404040;
+	color: #fff;
 	padding: 0;
 	line-height: 35px;
 }
@@ -1535,7 +1535,7 @@ object {
 	left: 12.5%;
 }
 .navbar-inverse .navbar-nav>li>a:hover {
-	color: #e96656;
+	color: #404040;
 	outline: none;
 }
 .navbar-toggle {
@@ -1544,7 +1544,7 @@ object {
 	margin-top: 23px;
 }
 .navbar-inverse .navbar-toggle:hover,.navbar-inverse .navbar-toggle:focus {
-	background-color: #e96656;
+	background-color: #3da868;
 	filter: alpha(opacity=100);
 	opacity: 1;
 	box-shadow: none;

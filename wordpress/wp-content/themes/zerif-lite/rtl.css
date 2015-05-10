@@ -1486,7 +1486,7 @@ object {
 	margin-top: 23px;
 }
 .navbar-inverse .navbar-toggle:hover,.navbar-inverse .navbar-toggle:focus {
-	background-color: #e96656;
+	background-color: #3da868;
 	filter: alpha(opacity=100);
 	opacity: 1;
 	box-shadow: none;
