@@ -2214,6 +2214,12 @@ width: -webkit-calc(100% / 4);
 	font-weight: 300!important;
 }
 
+.upcomingevents h5 {
+	font-size: 26px;
+	font-weight: bold;
+	margin-bottom: 0;
+}
+
 .upcomingevents h6 {
 	margin-bottom: 0;
 	font-size: 20px;
@@ -2231,7 +2237,7 @@ width: -webkit-calc(100% / 4);
 .home-cta {
 	position: absolute;
 	bottom: 69px;
-	margin-left: -150px;
+	margin-left: -206px;
 	left: 50%;
 }
 

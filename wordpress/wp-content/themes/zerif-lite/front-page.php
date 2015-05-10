@@ -162,7 +162,7 @@ if ( get_option( 'show_on_front' ) == 'page' ) {
 			<?php if (have_posts() ): while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
 
 				<section id="<?php post_class(); ?>" class="event">
-					<h6><?php the_title(); ?></h6>
+					<h5><?php the_title(); ?></h5>
 					<h6><?php echo get_field('month'); ?></h6>
 					<p><?php the_excerpt(); ?></p>
 				</section>
