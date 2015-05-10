@@ -540,7 +540,7 @@ input[type="submit"] {
 	border-radius: 4px;
 	margin: 10px;
 	border: none;
-	background-color: #e96656;
+	background-color: #3da868;
 	box-shadow: none;
 	text-shadow: none;
 	font-weight: 400;
@@ -772,7 +772,7 @@ a:active {
 	width: 50%;
 }
 .nav-links a {
-	color:#e96656;
+	color:#3da868;
 }
  /*---------------------------------------
  **   6.0 Accessibility                   -----
@@ -1404,9 +1404,12 @@ object {
 	margin-right: 0 !important;
 }
 .navbar-inverse .navbar-nav>li>a {
-	color: #404040;
+	color: #fff;
 	padding: 0;
 	line-height: 35px;
+}
+.navbar-inverse .navbar-nav>li>a:hover{
+	color: #3da868;
 }
 .navbar-inverse .main-navigation ul > li {
 	display: inline;

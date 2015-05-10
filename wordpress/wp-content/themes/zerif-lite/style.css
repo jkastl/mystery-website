@@ -647,7 +647,7 @@ textarea {
 .entry-content input[type="button"]:hover,
 .entry-content input[type="reset"]:hover,
 .entry-content input[type="submit"]:hover {
-	background: #cb4332;
+	opacity: .8;
 }
 .input-box {
 	border: 0 !important;
@@ -1550,7 +1550,7 @@ object {
 	box-shadow: none;
 }
 .navbar-toggle.active{
-    background-color: #e96656 !important;
+    background-color: #3da868 !important;
 }
 .navbar-toggle.collapsed{
     background-color: #808080 !important;

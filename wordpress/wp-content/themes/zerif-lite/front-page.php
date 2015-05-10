@@ -76,8 +76,9 @@ if ( get_option( 'show_on_front' ) == 'page' ) {
 	<div class="container" style="text-transform: uppercase;
   position: absolute;
   top: 200px;
-  left: 285px;
-  width: 700px;
+  left: -350px;
+  margin-left: 50%;
+  max-width: 700px;
   text-shadow: 3px 3px 1px black;
   color: white;
   z-index: 900;
