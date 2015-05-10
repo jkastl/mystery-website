@@ -130,9 +130,7 @@
 						echo esc_attr($zerif_copyright);
 					endif;
 					
-					echo '<div class="zerif-copyright-box"><a href="https://mail-attachment.googleusercontent.com/attachment/u/0/?ui=2&ik=8ac402fffd&attid=0.1.1&th=14d36d3a5fce3d24&view=att&zw&disp=inline&saduie=AG9B_P9ms9LX93V42-k_81J5eL5e&sadet=1431148299834&sadat=ANGjdJ_TfXauetDk9TRHN6GFPcY112BZQA4yma1DrXRIiQlTFVbJ5Z2R3rVB6KY&sads=oQceUCS6sU24Rmq5sRd6Y_FsarM" target="_blank">Form 990</a></div>
-';
-					
+					echo '<div class="zerif-copyright-box"><a href="https://mail-attachment.googleusercontent.com/attachment/u/0/?ui=2&ik=8ac402fffd&attid=0.1.1&th=14d36d3a5fce3d24&view=att&zw&disp=inline&saduie=AG9B_P9ms9LX93V42-k_81J5eL5e&sadet=1431148299834&sadat=ANGjdJ_TfXauetDk9TRHN6GFPcY112BZQA4yma1DrXRIiQlTFVbJ5Z2R3rVB6KY&sads=oQceUCS6sU24Rmq5sRd6Y_FsarM" target="_blank">Form 990</a></div>';
 					echo '</div>';
 			
 		endif;

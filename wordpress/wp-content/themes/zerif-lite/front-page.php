@@ -139,6 +139,24 @@ if ( get_option( 'show_on_front' ) == 'page' ) {
 		<section>
 			<h2>Spotlight</h2>
 			<hr />
+            <style type="text/css">
+                div.emd-container .person-img {
+                    padding: 25% !important;
+                    width: 25% !important;
+                    margin: 0 auto;
+                }
+                .employee_circle_grid_emd_employee-view .person:first-child {
+                    margin-left: 25%;
+                }
+            </style>
+            <?php
+                $dir_url = EMPSLIGHT_COM_PLUGIN_URL;
+                wp_enqueue_script('jquery');
+                wp_enqueue_style('font-awesome', '//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css');
+                wp_enqueue_style('employee-circle-grid-cdn', $dir_url . 'assets/css/view-employee-circle-grid.css');
+                wp_enqueue_script('employee-circle-grid-js', $dir_url . 'assets/js/employee-circle-grid.js');
+                wp_enqueue_style('allview-css', EMPSLIGHT_COM_PLUGIN_URL . '/assets/css/allview.css');
+            ?>
 			<?= do_shortcode('[employee_circle_grid filter="attr::emd_employee_featured::is::1"]'); ?>
 		</section>
 	</div>
