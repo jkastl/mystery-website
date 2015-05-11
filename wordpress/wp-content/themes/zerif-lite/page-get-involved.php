@@ -86,7 +86,7 @@ get_header(); ?>
 	</div>
 	</div>
 	<div class="panel khaki-bg">
-		<div class="container form-container">
+		<div class="container">
 			<?php the_field('ranger-photo') ?>
 		</div>
 	</div>
