@@ -42,21 +42,21 @@ get_header(); ?>
 		<h1>
 			<?php the_field('donate-header') ?>
 		</h1>
-			<h1>
+			<h3>
 			    <?php the_field('donate-paypal_header') ?>
-		    </h1>
+		    </h3>
 		    <div>
 			    <?php the_field('donate-paypal_content') ?>
             </div>
-			<h1>
+			<h3>
 			    <?php the_field('donate-amazon_header') ?>
-		    </h1>
+		    </h3>
 		    <div>
 			    <?php the_field('donate-amazon_content') ?>
             </div>
-			<h1>
+			<h3>
 			    <?php the_field('donate-pledge_forms') ?>
-		    </h1>
+		    </h3>
 		    <div>
 			    <?php the_field('donate-pledge_content') ?>
             </div>
@@ -68,17 +68,17 @@ get_header(); ?>
 			<?php the_field('volunteer-header') ?>
 		</h1>
 		<div>
-			<h1>
+			<h3>
 			    <?php the_field('volunteer-individual_header') ?>
-		    </h1>
+		    </h3>
 		    <div>
 			    <?php the_field('volunteer-individual_content') ?>
             </div>
 		</div>
 		<div>
-			<h1>
+			<h3>
 			    <?php the_field('volunteer-business_header') ?>
-		    </h1>
+		    </h3>
 		    <div>
 			    <?php the_field('volunteer-business_content') ?>
             </div>
@@ -96,9 +96,9 @@ get_header(); ?>
 		    <?php the_field('need-ranger_header') ?>
 	    </h1>
 		<div>
-			<h1>
+			<h3>
 			    <?php the_field('need-ranger_community_header') ?>
-		    </h1>
+		    </h3>
 		    <div>
 			    <?php the_field('need-ranger_community_content') ?>
             </div>
