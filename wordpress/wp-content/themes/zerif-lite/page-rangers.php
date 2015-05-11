@@ -54,17 +54,17 @@ get_header(); ?>
 		<h2 class="container">
 			<?php the_field('rangers-spotlight_header') ?>
 		</h2>
-		<div class="container form-container">
-			<?php the_field('rangers-spotlight') ?>
-		</div>
-	</div>
-	<div>
 		<div class="container">
             <style type="text/css">
                 div.emd-container .person-img {
                     padding: 25% !important;
                     width: 25% !important;
                     margin: 0 auto;
+                }
+                @media (min-width: 992px) {
+                    .emd-view-results .person:first-child {
+                        margin-left: 18%;
+                    }
                 }
             </style>
             <?php
@@ -75,6 +75,11 @@ get_header(); ?>
                 wp_enqueue_script('employee-circle-grid-js', $dir_url . 'assets/js/employee-circle-grid.js');
                 wp_enqueue_style('allview-css', EMPSLIGHT_COM_PLUGIN_URL . '/assets/css/allview.css');
             ?>
+			<?php the_field('rangers-spotlight') ?>
+		</div>
+	</div>
+	<div>
+		<div class="container">
 			<?php while (have_posts()) {
     the_post();
     get_template_part( 'content', 'page' );

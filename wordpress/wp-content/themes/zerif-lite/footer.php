@@ -26,7 +26,7 @@
 
 	<?php
 		$footer_sections = 0;
-		$zerif_address = get_theme_mod('zerif_address','5908 Swope Pkwy, Kansas City, MO 64130');
+		$zerif_address = get_theme_mod('zerif_address','5908 Swope Pkwy<br />Kansas City, MO 64130');
 		$zerif_address_icon = get_theme_mod('zerif_address_icon',get_template_directory_uri().'/images/map25-redish.png');
 		$maps_link = 'https://www.google.com/maps/place/5908+Swope+Pkwy,+Kansas+City,+MO+64130/@39.0177202,-94.5431631,17z/data=!3m1!4b1!4m2!3m1!1s0x87c0e598c0e8923f:0x63d54dbddec64f3f';
 		
