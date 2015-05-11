@@ -96,17 +96,6 @@ endif; ?>
 
 				<?php
 
-					$zerif_logo = get_theme_mod('zerif_logo');
-
-					if(isset($zerif_logo) && $zerif_logo != ""):
-
-						echo '<a href="'.esc_url( home_url( '/' ) ).'" class="navbar-brand">';
-
-							echo '<img src="'.$zerif_logo.'" alt="'.get_bloginfo('title').'">';
-
-						echo '</a>';
-
-					else:
 
 						echo '<a href="'.esc_url( home_url( '/' ) ).'" class="navbar-brand">';
 
@@ -114,7 +103,6 @@ endif; ?>
 
 						echo '</a>';
 
-					endif;
 
 				?>
 

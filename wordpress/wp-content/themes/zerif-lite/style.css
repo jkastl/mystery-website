@@ -4333,31 +4333,32 @@ body.custom-background {
 @media (min-width: 768px) and (max-width: 1024px) {
 
     /* TOP BAR ELEMENTS */
-	.responsive-logo {
-		width: 100%;
-		position: relative;
-		text-align: center;
-		margin-top: 10px;
-		padding-top: 15px;
-	}
-	.responsive-logo a {
-		float: none !important;
-	}
-	.responsive-nav {
-		text-align: center;
-		width: 100%;
-		padding-top: 0;
-	}
-	.responsive-nav li {
-		margin-bottom: 15px;
-		margin-top: 0 !important;
-	}
+    .navbar-brand img {
+    	display: block;
+  		float: left;
+    }
+
+    #site-navigation {
+    	float: right;
+    }
 
      /* HOME */
 	.intro {
 		margin-top: 40%;
 		line-height: 55px;
 		font-size: 45px;
+	}
+
+	.responsive-logo {
+		width: auto!important;
+	}
+
+	.navbar-nav.navbar-right:last-child {
+		margin: 20px 0 0;
+	}
+
+	#main-nav {
+		max-height: 75px;
 	}
 
       /* ABOUT US */
@@ -4442,6 +4443,9 @@ body.custom-background {
 @media (max-width: 767px) {
 
 	/* HEADER */
+	.navbar-nav {
+		margin: 78.5px -15px 10px;
+	}
 	.bs-navbar-collapse {
 		border: 0;
 	}
@@ -4499,9 +4503,7 @@ body.custom-background {
 		left: 0;
 		top: 0;
 	}
-	#main-nav {
-		overflow: hidden;
-	}
+
 	#main-nav,
 	#main-nav.fixed {
 		position: relative;
