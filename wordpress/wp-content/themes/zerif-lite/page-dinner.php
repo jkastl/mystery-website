@@ -45,6 +45,10 @@ get_header(); ?>
                     <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=3X3T8KHG4F8UA" target="_blank"><button class="btn btn-large">Dinner Ticket Table</button></a>
                 </div>
             </div>
+        </div>
+    </div>
+    <div class="panel">
+       <div class="container">
             <div class="row"><?= get_field('dinner-copy-bottom') ?></div>
         </div>
     </div>
