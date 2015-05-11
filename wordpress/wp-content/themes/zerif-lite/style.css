@@ -425,7 +425,10 @@ thead th{
 	background: #404040;
 }
 .white-bg {
-	background:  #FFFFFF;
+	background: #FFFFFF;
+}
+.khaki-bg {
+	background: #fff9f2;
 }
 /** FOR TEXTS AND ICON FONTS **/
 .red-text {
