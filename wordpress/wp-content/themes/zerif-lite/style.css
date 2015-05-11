@@ -999,6 +999,18 @@ a:active {
 	margin-top: -8px;
 }
 
+.home .panel-body {
+	text-align: justify;
+}
+
+.home .person-tag {
+	margin-top: 10px;
+}
+
+#home {
+	padding-bottom: 150px;
+}
+
  /*---------------------------------------
  **   10.1 Posts and pages                   -----
 -----------------------------------------*/
