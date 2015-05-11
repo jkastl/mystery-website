@@ -79,6 +79,10 @@ get_header(); ?>
                     width: 25% !important;
                     margin: 0 auto;
                 }
+                .person-tag {
+                    margin: 8px 0;
+                    display: inline-block;
+                }
             </style>
 			<?php while (have_posts()) {
 				the_post();
