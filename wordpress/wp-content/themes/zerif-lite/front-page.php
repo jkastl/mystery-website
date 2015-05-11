@@ -145,7 +145,7 @@ if ( get_option( 'show_on_front' ) == 'page' ) {
                     width: 25% !important;
                     margin: 0 auto;
                 }
-                .employee_circle_grid_emd_employee-view .person:first-child {
+                .emd-view-results .person:first-child {
                     margin-left: 25%;
                 }
             </style>
