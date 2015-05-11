@@ -73,18 +73,23 @@ if ( get_option( 'show_on_front' ) == 'page' ) {
 
 	<?php
 } ?>
-	<div class="container" style="text-transform: uppercase;
-  position: absolute;
-  top: 200px;
-  left: -350px;
-  margin-left: 50%;
-  max-width: 700px;
-  text-shadow: 3px 3px 1px black;
-  color: white;
-  z-index: 900;
-  font-weight: bold;
-  font-size: 42px;
-">Guiding the young men of Kansas City's Urban Core</div>
+    <style type="text/css">
+        .video-overlay {
+            text-shadow: 3px 3px 1px black;
+            top: 300px;
+            font-weight: bold;
+            font-size: 35px;
+            position: absolute;
+            color: white;
+            z-index: 900;
+        }
+        @media (max-width: 767px){
+            .video-overlay {
+                font-size: 26px;
+            }
+        }
+    </style>
+    <div class="row video-overlay">Guiding the young men<br />of Kansas City's Urban Core</div>
 	<div class="video">
 		<iframe width="1280" height="720" src="https://www.youtube.com/embed/v0AJplcP3SA?rel=0&controls=0&autoplay=1&showinfo=0&loop=1" frameborder="0" allowfullscreen></iframe>
 
