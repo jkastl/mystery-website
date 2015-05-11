@@ -73,6 +73,13 @@ get_header(); ?>
 	</div>
 	<div>
 		<div class="container">
+            <style type="text/css">
+                div.emd-container .person-img {
+                    padding: 25% !important;
+                    width: 25% !important;
+                    margin: 0 auto;
+                }
+            </style>
 			<?php while (have_posts()) {
 				the_post();
 				get_template_part( 'content', 'page' );

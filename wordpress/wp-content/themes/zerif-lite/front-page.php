@@ -147,7 +147,7 @@ if ( get_option( 'show_on_front' ) == 'page' ) {
                 }
                 @media (min-width: 992px) {
                     .emd-view-results .person:first-child {
-                        margin-left: 20%;
+                        margin-left: 18%;
                     }
                 }
             </style>
