@@ -1011,6 +1011,10 @@ a:active {
 	padding-bottom: 150px;
 }
 
+.home #home {
+	padding-bottom: 0;
+}
+
 .video {
     position: relative;
     padding-bottom: 56.25%;
