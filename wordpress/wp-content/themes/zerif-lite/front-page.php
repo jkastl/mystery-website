@@ -76,7 +76,7 @@ if ( get_option( 'show_on_front' ) == 'page' ) {
     <style type="text/css">
         .video-overlay {
             text-shadow: 3px 3px 1px black;
-            top: 300px;
+            top: 6%;
             font-weight: bold;
             font-size: 35px;
             position: absolute;
@@ -86,6 +86,12 @@ if ( get_option( 'show_on_front' ) == 'page' ) {
         @media (max-width: 767px){
             .video-overlay {
                 font-size: 26px;
+                top: 4%;
+            }
+        }
+         @media (max-width: 450px){
+            .video-overlay {
+                display: none;
             }
         }
     </style>

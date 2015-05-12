@@ -1011,6 +1011,22 @@ a:active {
 	padding-bottom: 150px;
 }
 
+.video {
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 35px;
+    height: 0;
+    overflow: hidden;
+}
+
+.video iframe {
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
  /*---------------------------------------
  **   10.1 Posts and pages                   -----
 -----------------------------------------*/
