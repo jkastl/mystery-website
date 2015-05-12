@@ -36,7 +36,7 @@ get_header(); ?>
         <div class="container">
             <div class="row">
                 <div class="col-sm-4">
-                    <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=FAWKKKVTTA4YY" target="_blank"><button class="btn btn-large">Dontation</button></a>
+                    <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=FAWKKKVTTA4YY" target="_blank"><button class="btn btn-large">Donation</button></a>
                 </div>
                 <div class="col-sm-4">
                     <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=JL73CDUH8SYTY" target="_blank"><button class="btn btn-large">Dinner Ticket Single</button></a>
