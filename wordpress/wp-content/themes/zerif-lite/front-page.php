@@ -100,7 +100,7 @@ if ( get_option( 'show_on_front' ) == 'page' ) {
 		<iframe width="1280" height="720" src="https://www.youtube.com/embed/v0AJplcP3SA?rel=0&controls=0&autoplay=1&showinfo=0&loop=1" frameborder="0" allowfullscreen></iframe>
 
 		<div class="home-cta">
-			<a href="/donate" class="btn btn-primary custom-button red-btn">Get Involved</a>
+			<a href="/get-involved" class="btn btn-primary custom-button red-btn">Get Involved</a>
 			<a href="/apply" class="btn btn-primary custom-button green-btn">Become a Ranger</a>
 		</div>
 	</div>
