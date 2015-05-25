@@ -696,9 +696,7 @@ input:focus {
 a {
 	color: #1288b9;
 }
-a:visited {
-	color: #1288b9;
-}
+
 a:hover,
 a:focus,
 a:active {
@@ -1005,10 +1003,6 @@ a:active {
 
 .home .person-tag {
 	margin-top: 10px;
-}
-
-#home {
-	padding-bottom: 150px;
 }
 
 .home #home {
@@ -2294,10 +2288,12 @@ div.emd-container .row {
 
 .home a.red-btn:hover {
 	background: #cc3327;
+	opacity: .8;
 }
 
 .home a.green-btn:hover {
 	background: #3daa6a;
+	opacity: .8;
 }
 
 .gaugePress {
@@ -4469,6 +4465,10 @@ body.custom-background {
 
 @media (max-width: 992px) {
 
+	#home {
+		padding-bottom: 150px;
+	}
+
 	.purchase-now .red-btn{
 	    float: none;
 	}
@@ -4603,7 +4603,7 @@ body.custom-background {
     /* HOME */
 	.header {
 		min-height: inherit;
-		padding-bottom: 0 !important;
+		padding-bottom: 60px !important;
 	}
 	.intro {
 		line-height: 8vh;
