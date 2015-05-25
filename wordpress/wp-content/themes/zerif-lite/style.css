@@ -2241,6 +2241,18 @@ width: -webkit-calc(100% / 4);
 	color: #e96656;
 }
 
+.founder div.emd-container .person {
+	width: 100%;
+}
+
+.founder div.emd-container .person-thumb {
+	width: 100%;
+}
+
+div.emd-container .row {
+	margin-left: 0;
+	margin-right: 0;
+}
 
 /* Section Upcoming Events*/
 
