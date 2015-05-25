@@ -2292,12 +2292,24 @@ div.emd-container .row {
 	opacity: .8;
 }
 
-.home-cta a:.red-btn {
-	background-image: #cc3327;
+.home a.red-btn:hover {
+	background: #cc3327;
 }
 
-.home-cta a.green-btn:hover {
+.home a.green-btn:hover {
 	background: #3daa6a;
+}
+
+.gaugePress {
+	margin: -65px auto 10px;
+}
+
+.home .get-involved {
+	padding-bottom: 20px;
+}
+
+.home .get-involved p {
+	padding: 0 10px;
 }
 
 /*---------------------------------------

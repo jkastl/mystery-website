@@ -107,9 +107,7 @@ if ( get_option( 'show_on_front' ) == 'page' ) {
 
 </header> <!-- / END HOME SECTION  -->
 
-
 <div id="content" class="site-content">
-
 
 <section class="about-us" id="aboutus">
 	<div class="container">
@@ -173,6 +171,15 @@ if ( get_option( 'show_on_front' ) == 'page' ) {
 			<?= do_shortcode('[employee_circle_grid filter="attr::emd_employee_featured::is::1"]'); ?>
 		</section>
 	</div>
+</section>
+<section class="get-involved">
+    <h1>Get Involved</h1>
+    <p>Forage tilde Williamsburg lo-fi, chillwave paleo ugh PBR seitan disrupt. Street art irony roof party, normcore chambray food truck slow-carb stumptown YOLO. Try-hard tofu pork belly meditation migas put a bird on it, hashtag VHS vegan kogi biodiesel High Life pickled you probably haven't heard of them. </p>
+
+    <?php echo do_shortcode('[gauge width="400px" height="220px" value="75" title="" min="0" max="100" label="%" hideMinMax="false" color="#1288b9" backcolor="#EDEDED" widthscale="0.8" counter="true" decimals="2" format="true" titlecolor="#1288b9" valuecolor="#1288b9"]
+    '); ?>
+    <a href="http://visitor.r20.constantcontact.com/manage/optin/ea?v=001qie9IeSPzo4jR1e8EPNzN3Q1noDmi9OH8LW5ltcDxJxBEmYUOYQSXFpnTIECvkKSDuip6yxJzqw%3D" class="btn btn-primary custom-button green-btn">Join Our Email List</a>
+    <a href="/get-involved#donate" class="btn btn-primary custom-button red-btn">Donate</a>
 </section>
 <div class="img-responsive">
 	<img src="<?php bloginfo('template_url'); ?>/images/home-image.jpg">

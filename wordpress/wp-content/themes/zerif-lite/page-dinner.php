@@ -27,9 +27,9 @@ get_header(); ?>
         </div>
     </div>
     <div class="panel">
-        <h2 class="container">
+        <h1 class="container">
             <?php the_field('dinner-title') ?>
-        </h2>
+        </h1>
         <div class="container">
             <?php the_field('dinner-body') ?>
         </div>

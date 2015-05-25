@@ -40,7 +40,7 @@
 		$zerif_socials_twitter = get_theme_mod('zerif_socials_twitter','#');
 		$zerif_socials_linkedin = get_theme_mod('zerif_socials_linkedin','#');
 		$zerif_socials_behance = get_theme_mod('zerif_socials_behance','#');
-		$zerif_socials_dribbble = get_theme_mod('zerif_socials_dribbble','#');
+		$zerif_socials_instagram = get_theme_mod('zerif_socials_instagram','#');
 			
 		$zerif_copyright = get_theme_mod('zerif_copyright');
 
@@ -55,7 +55,7 @@
 		if(!empty($zerif_phone) || !empty($zerif_phone_icon)):
 			$footer_sections++;
 		endif;
-		if(!empty($zerif_socials_facebook) || !empty($zerif_socials_twitter) || !empty($zerif_socials_linkedin) || !empty($zerif_socials_behance) || !empty($zerif_socials_dribbble) || 
+		if(!empty($zerif_socials_facebook) || !empty($zerif_socials_twitter) || !empty($zerif_socials_linkedin) || !empty($zerif_socials_behance) || !empty($zerif_socials_instagram) || 
 		!empty($zerif_copyright)):
 			$footer_sections++;
 		endif;
@@ -107,11 +107,11 @@
 			echo '</div>';
 		endif;
 		
-		if( !empty($zerif_socials_facebook) || !empty($zerif_socials_twitter) || !empty($zerif_socials_linkedin) || !empty($zerif_socials_behance) || !empty($zerif_socials_dribbble) || 
+		if( !empty($zerif_socials_facebook) || !empty($zerif_socials_twitter) || !empty($zerif_socials_linkedin) || !empty($zerif_socials_behance) || !empty($zerif_socials_instagram) || 
 		!empty($zerif_copyright)):
 		
 					echo '<div class="'.$footer_class.' copyright">';
-					if(!empty($zerif_socials_facebook) || !empty($zerif_socials_twitter) || !empty($zerif_socials_linkedin) || !empty($zerif_socials_behance) || !empty($zerif_socials_dribbble)):
+					if(!empty($zerif_socials_facebook) || !empty($zerif_socials_twitter) || !empty($zerif_socials_linkedin) || !empty($zerif_socials_behance) || !empty($zerif_socials_instagram)):
 						echo '<ul class="social">';
 						
 						/* facebook */
@@ -121,6 +121,9 @@
 						/* twitter */
 						if( !empty($zerif_socials_twitter) ):
 							echo '<li><a target="_blank" href="https://twitter.com/UrbanRangerCorp"><i class="fa fa-twitter"></i></a></li>';
+						endif;
+						if( !empty($zerif_socials_instagram) ):
+							echo '<li><a target="_blank" href="#"><i class="fa fa-instagram"></i></a></li>';
 						endif;
 						echo '</ul>';
 					endif;	
