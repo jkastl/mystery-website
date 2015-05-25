@@ -5,8 +5,9 @@
  *
  * @package zerif
  */
-?>
+?> 
 
+<?php echo do_shortcode('[URIS id=110]') ?>
 
 <?php $args = array(
 		'post_type'=>'event',
