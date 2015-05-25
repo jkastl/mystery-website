@@ -7,7 +7,11 @@
  */
 ?> 
 
-<?php echo do_shortcode('[URIS id=110]') ?>
+<div class="panel">
+	<div class="container">
+		<?php the_field('events-_lideshow') ?>
+	</div>
+</div>
 
 <?php $args = array(
 		'post_type'=>'event',
