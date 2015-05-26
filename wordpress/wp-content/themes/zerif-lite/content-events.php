@@ -9,7 +9,7 @@
 
 <div class="panel">
 	<div class="container">
-		<?php the_field('events-_lideshow') ?>
+		<?php the_field('events_slideshow') ?>
 	</div>
 </div>
 
