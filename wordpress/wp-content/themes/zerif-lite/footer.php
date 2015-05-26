@@ -30,7 +30,7 @@
 		$zerif_address_icon = get_theme_mod('zerif_address_icon',get_template_directory_uri().'/images/map25-redish.png');
 		$maps_link = 'https://www.google.com/maps/place/5908+Swope+Pkwy,+Kansas+City,+MO+64130/@39.0177202,-94.5431631,17z/data=!3m1!4b1!4m2!3m1!1s0x87c0e598c0e8923f:0x63d54dbddec64f3f';
 		
-		$zerif_email = get_theme_mod('zerif_email','urcinfo@urckc.org');
+		$zerif_email = get_theme_mod('zerif_email','Subscribe to Newsletter');
 		$zerif_email_icon = get_theme_mod('zerif_email_icon',get_template_directory_uri().'/images/envelope4-green.png');
 		
 		$zerif_phone = get_theme_mod('zerif_phone','(816) 333-6455');
@@ -86,7 +86,7 @@
 		
 		
 		if( !empty($zerif_email) ):
-			echo '<a href="mailto:' . $zerif_email . '"><div class="'.$footer_class.' company-details">';
+			echo '<a href="http://visitor.r20.constantcontact.com/manage/optin/ea?v=001qie9IeSPzo4jR1e8EPNzN3Q1noDmi9OH8LW5ltcDxJxBEmYUOYQSXFpnTIECvkKSDuip6yxJzqw%3D"><div class="'.$footer_class.' company-details">';
 				echo '<div class="icon-top green-text">';
 					
 					if( !empty($zerif_email_icon) ) echo '<img src="'.esc_url(__($zerif_email_icon,'zerif-lite')).'">';
@@ -123,7 +123,7 @@
 							echo '<li><a target="_blank" href="https://twitter.com/UrbanRangerCorp"><i class="fa fa-twitter"></i></a></li>';
 						endif;
 						if( !empty($zerif_socials_instagram) ):
-							echo '<li><a target="_blank" href="#"><i class="fa fa-instagram"></i></a></li>';
+							echo '<li><a target="_blank" href="https://instagram.com/urbanrangercorps/"><i class="fa fa-instagram"></i></a></li>';
 						endif;
 						echo '</ul>';
 					endif;	
