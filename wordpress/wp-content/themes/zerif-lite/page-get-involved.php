@@ -37,6 +37,12 @@ get_header(); ?>
 			<?php the_field('get-involved_content') ?>
 		</div>
 	</div>
+	<div class="panel">
+	<?php $percentage = the_field('get-involved_gauge_percentage'); 
+		$gauge = '[gauge width="400px" height="220px" value="75" title="" min="0" max="100" label="%" hideMinMax="false" color="#1288b9" backcolor="#EDEDED" widthscale="0.8" counter="true" decimals="2" format="true" titlecolor="#1288b9" valuecolor="#1288b9"]
+    '?>
+		<?php echo do_shortcode($gauge); ?>
+	</div>
 	<div class="panel khaki-bg">
 	<div class="container form-container">
 		<h1>
@@ -105,7 +111,7 @@ get_header(); ?>
 		</div>
 	</div>
 	</div>
-	<div class=khaki-bg">
+	<div class="khaki-bg">
 		<div class="container">
 			<?php while (have_posts()) {
     the_post();

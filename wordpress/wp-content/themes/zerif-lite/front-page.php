@@ -175,7 +175,6 @@ if ( get_option( 'show_on_front' ) == 'page' ) {
 <section class="container">
     <div class="get-involved section-header">
         <h2>Get Involved</h2>
-        <p>Forage tilde Williamsburg lo-fi, chillwave paleo ugh PBR seitan disrupt. Street art irony roof party, normcore chambray food truck slow-carb stumptown YOLO. Try-hard tofu pork belly meditation migas put a bird on it, hashtag VHS vegan kogi biodiesel High Life pickled you probably haven't heard of them. </p>
         <a href="http://visitor.r20.constantcontact.com/manage/optin/ea?v=001qie9IeSPzo4jR1e8EPNzN3Q1noDmi9OH8LW5ltcDxJxBEmYUOYQSXFpnTIECvkKSDuip6yxJzqw%3D" class="btn btn-primary custom-button green-btn">Join Our Email List</a>
         <a href="/get-involved#donate" class="btn btn-primary custom-button red-btn">Donate</a>
         <div class="logos">
@@ -201,7 +200,7 @@ if ( get_option( 'show_on_front' ) == 'page' ) {
 	$the_query = new WP_Query($args); ?>
 	<div class="container">
 		<div class="section-header">
-		<h2><a href="/events" class="dark-text">Upcoming Events</a></h2>
+		<h2><a href="/events" class="dark-text">UPCOMING EVENTS</a></h2>
 
 			<?php if (have_posts() ): while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
 
